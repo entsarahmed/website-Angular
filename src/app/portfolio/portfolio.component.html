@@ -1,0 +1,28 @@
+<section class="min-vh-100">
+  <div class="text-center container">
+    <h1 class="py-1 head fw-bold">PORTFOLIO COMPONENT</h1>
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="line"></div>
+      <i class="fa-solid fa-star p-3 fs-3"></i>
+      <div class="line"></div>
+    </div>
+  </div> 
+  <div class="row px-5 g-5 mb-3">
+    <div *ngFor="let image of images" class="col-md-4" (click)="imgsrc">
+      <div class="layr" (click)="showLayer(hameda)">
+        <div  class="layer rounded-3 d-flex align-items-center justify-content-center" (click)="showImage(imgsrc)">
+          <i class="fa-solid fa-plus fw-bold text-white"></i>
+        </div>
+<div>
+  <img #imgsrc [src]="image.src" alt="" class="w-100 rounded-3">
+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div (click)="closeLayer(hameda)" #hameda class="lry d-flex justify-content-center align-items-center d-none">
+  <div class="img">
+    <img [src]="showSrc" alt="" class="w-100">
+  </div>
+</div>
