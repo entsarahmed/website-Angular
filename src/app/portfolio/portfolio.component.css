@@ -2,7 +2,7 @@
 section{
   margin-top: 30px;
   padding-top: 80px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 section .head{
